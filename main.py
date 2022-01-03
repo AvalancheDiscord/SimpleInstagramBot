@@ -62,6 +62,7 @@ class WebInsta:
                   WebEagle.BrowsingAs.type(WebInsta._credits, xpath = "/html/body/div[1]/section/main/article/div[2]/div[1]/div/form/div/div[1]/div/label/input")
                   WebEagle.BrowsingAs.type(WebInsta._password, xpath = "/html/body/div[1]/section/main/article/div[2]/div[1]/div/form/div/div[2]/div/label/input")
                   WebEagle.BrowsingAs.click(css_selector = ".L3NKy")
+                  WebEagle.BrowsingAs.click(xpath = "/html/body/div[1]/section/main/div/div/div/div/button")
   
                   print(" [👍] Logged In  | Successfuly")
                   time.sleep(5)
@@ -87,8 +88,10 @@ class WebInsta:
           print (" [!] Followed ({}/{})".format(followed, failed))
       
       def send_message(user, message: str):
-          print(" [👍] Loading..")
+          print(" [👍] Loading..")  
+      
           WebEagle.get("https://www.instagram.com/direct/new")
+          WebEagle.BrowsingAs.click(xpath = "/html/body/div[6]/div/div/div/div[3]/button[2]")
 
           #_--------_#
           WebEagle.BrowsingAs.click(xpath = "/html/body/div[1]/section/div/div[2]/div/div/div[2]/div/div[3]/div/button")

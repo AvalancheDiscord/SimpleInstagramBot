@@ -88,7 +88,7 @@ class WebInsta:
       
       def send_message(user, message: str):
           print(" [👍] Loading..")
-          WebEagle.get("https://www.instagram.com/direct/new/")
+          WebEagle.get("https://www.instagram.com/direct/")
 
           #_--------_#
           WebEagle.BrowsingAs.click(xpath = "/html/body/div[1]/section/div/div[2]/div/div/div[2]/div/div[3]/div/button")
